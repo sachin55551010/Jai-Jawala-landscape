@@ -38,12 +38,12 @@ export const ContactSection = () => {
       );
       toast.success("Message send successfully");
     } catch (error) {
-      console.log("send email error : ", error);
-      toast.error("Something went wrong");
-    } finally {
       console.log("SERVICE:", import.meta.env.VITE_SERVICE_ID);
       console.log("TEMPLATE:", import.meta.env.VITE_TEMPLATE_ID);
       console.log("PUBLIC:", import.meta.env.VITE_PUBLIC_KEY);
+      console.log("send email error : ", error);
+      toast.error("Something went wrong");
+    } finally {
       setIsLoading(false);
       setFormData({
         name: "",

@@ -1,4 +1,4 @@
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 

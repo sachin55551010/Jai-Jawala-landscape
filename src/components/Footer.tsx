@@ -1,7 +1,7 @@
 import { FaFacebook } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
-
+import { motion } from "motion/react";
 export const Footer = () => {
   return (
     <footer className="bg-[--base-color] text-[--main-text-color] pt-12 pb-6 px-6 lg:px-20">
@@ -21,14 +21,15 @@ export const Footer = () => {
           <h3 className="font-semibold mb-4 text-lg text-(--secondary-text-color)">
             Quick Links
           </h3>
-          <ul className="flex flex-col gap-2 ">
+          <ul className="flex flex-col gap-2">
             {["Home", "Services", "Projects", "Contact"].map((item) => (
-              <li
+              <motion.li
+                whileHover={{ scale: 1.2 }}
                 key={item}
-                className="hover:scale-105 transition cursor-pointer text-(--secondary-text-color)"
+                className="cursor-pointer text-(--secondary-text-color)"
               >
                 {item}
-              </li>
+              </motion.li>
             ))}
           </ul>
         </div>

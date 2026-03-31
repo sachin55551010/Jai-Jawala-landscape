@@ -88,7 +88,7 @@ export const HeroSection = () => {
                 Satisfied Clients
               </div>
               <div className="font-extrabold text-shadow-[5px_5px_5px_rgba(0,0,0,.7)]">
-                10+ years of experience
+                18+ years of experience
               </div>
               <div>
                 <FaUsers

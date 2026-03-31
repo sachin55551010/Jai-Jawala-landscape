@@ -1,19 +1,19 @@
 import { Link } from "react-router-dom";
-import serviceImg from "../assets/service.jpg";
-import { ServiceList } from "../components/ServiceList";
+import project from "../assets/project.jpg";
 import { HeadingAnimateText } from "../components/ui/HeadingAnimateText";
-export const ServiceSection = () => {
-  const heading = "OUR SERVICES";
+import { FaqPage } from "../components/FaqPage";
+export const ProjectSection = () => {
+  const heading: string = "PROJECTS";
   return (
-    <div className="max-w-dvw overflow-x-hidden">
-      <div
+    <div className="overflow-hidden">
+      {/* heading section */}
+      <section
         className="h-100 w-dvw bg-cover bg-center bg-no-repeat p-2 flex flex-col items-start justify-end"
-        style={{ backgroundImage: `url(${serviceImg})` }}
+        style={{ backgroundImage: `url(${project})` }}
       >
-        <Link to="/">
-          <h6 className="text-(--base-color) mb-2 text-lg opacity-60">HOME</h6>
+        <Link to="/" className="text-(--base-color) mb-2 text-lg opacity-60">
+          HOME
         </Link>
-
         <div className="text-gray-200 flex">
           {heading.split("").map((text, index) => {
             return (
@@ -27,9 +27,9 @@ export const ServiceSection = () => {
             );
           })}
         </div>
-      </div>
+      </section>
 
-      <ServiceList />
+      <FaqPage />
     </div>
   );
 };

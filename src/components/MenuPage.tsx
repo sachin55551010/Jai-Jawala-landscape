@@ -38,7 +38,7 @@ export const MenuPage = () => {
         <X
           onClick={closeMenu}
           size={40}
-          strokeWidth={3}
+          strokeWidth={2}
           className="text-gray-300 cursor-pointer"
         />
       </div>
@@ -49,7 +49,7 @@ export const MenuPage = () => {
         animate={{ opacity: [0, 1] }}
         transition={{ delay: 0.5 }}
         onClick={closeMenu}
-        className="p-4 text-gray-200 flex flex-col gap-4 mt-6"
+        className="p-4 text-(--base-color) flex flex-col gap-8 mt-12"
       >
         <Link to="/">
           <div className="text-3xl border-b pb-6 font-bold border-white/40 hover:border-white cursor-pointer transition-all duration-300">
@@ -69,11 +69,11 @@ export const MenuPage = () => {
           </div>
         </Link>
 
-        <Link to="about">
+        {/* <Link to="about">
           <div className="text-3xl border-b pb-6 font-bold border-white/40 hover:border-white cursor-pointer transition-all duration-300">
             About
           </div>
-        </Link>
+        </Link> */}
 
         <Link to="contact">
           <div className="text-3xl border-b pb-6 font-bold border-white/40 hover:border-white cursor-pointer transition-all duration-300">

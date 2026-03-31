@@ -8,6 +8,10 @@ import { AnimatePresence } from "motion/react";
 import { ServiceSection } from "./pages/ServiceSection";
 import { Footer } from "./components/Footer";
 import { useEffect } from "react";
+import { ContactSection } from "./pages/ContactSection";
+import { AboutSection } from "./pages/AboutSection";
+import { ProjectSection } from "./pages/ProjectSection";
+import { Toaster } from "react-hot-toast";
 function App() {
   const { isMenuOpen } = useDataStore();
   useEffect(() => {
@@ -29,11 +33,12 @@ function App() {
       <Routes>
         <Route path="/" element={<HeroSection />} />
         <Route path="/services" element={<ServiceSection />} />
-        <Route path="/projects" element={<ServiceSection />} />
-        <Route path="/about" element={<ServiceSection />} />
-        <Route path="/contact" element={<ServiceSection />} />
+        <Route path="/projects" element={<ProjectSection />} />
+        <Route path="/about" element={<AboutSection />} />
+        <Route path="/contact" element={<ContactSection />} />
       </Routes>
       <Footer />
+      <Toaster />
     </div>
   );
 }

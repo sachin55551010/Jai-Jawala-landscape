@@ -1,9 +1,15 @@
+import { Link } from "react-router-dom";
 import { serviceList } from "./constants/serviceList";
 import { motion } from "motion/react";
 export const ServiceList = () => {
+  const handleBtn = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
   return (
     <div className="p-3">
-      <div className="grid gap-4 mt-20 lg:grid-cols-2 overflow-x-hidden overflow-hidden">
+      <div className="grid gap-8 mt-20 lg:grid-cols-2 overflow-x-hidden overflow-hidden">
         {serviceList.map((elem, index) => {
           const Icon = elem.icon;
           return (
@@ -31,6 +37,14 @@ export const ServiceList = () => {
           );
         })}
       </div>
+      <Link to="/contact">
+        <button
+          onClick={handleBtn}
+          className="bg-(--primary-bg) w-full mt-14 py-3 rounded-lg text-(--secondary-bg) font-bold"
+        >
+          Contact Us
+        </button>
+      </Link>
     </div>
   );
 };

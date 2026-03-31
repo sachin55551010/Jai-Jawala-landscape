@@ -13,21 +13,31 @@ export const NavBar = () => {
       <div>Logo</div>
 
       {/* Desktop Menu (Centered) */}
-      <ul className="hidden lg:flex absolute left-1/2 -translate-x-1/2 gap-8 font-semibold cursor-pointer">
+      <ul className="hidden lg:flex absolute left-1/2 -translate-x-1/2 gap-8 font-semibold cursor-pointer text-white">
         <Link to="/">
-          <li className="tracking-widest text-shadow-[3px_3px_3px_rgba(0,0,0,1)]">
-            Home
+          <li className="tracking-widest text-shadow-[3px_3px_3px_rgba(0,0,0,.7)] ">
+            {" "}
+            Home{" "}
           </li>
         </Link>
 
-        <li>About</li>
+        {/* <li>About</li> */}
 
         <Link to="/services">
-          <li>Service</li>
+          <li className="tracking-widest text-shadow-[3px_3px_3px_rgba(0,0,0,.7)] ">
+            Service
+          </li>
         </Link>
 
-        <li>Projects</li>
-        <li>Contact</li>
+        <li className="tracking-widest text-shadow-[3px_3px_3px_rgba(0,0,0,.7)] ">
+          Projects
+        </li>
+
+        <Link to="contact">
+          <li className="tracking-widest text-shadow-[3px_3px_3px_rgba(0,0,0,.7)] ">
+            Contact
+          </li>
+        </Link>
       </ul>
 
       {/* Mobile Menu Icon */}

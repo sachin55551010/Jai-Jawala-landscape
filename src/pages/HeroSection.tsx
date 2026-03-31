@@ -5,6 +5,7 @@ import { CheckCircle } from "lucide-react";
 import { MoreSection } from "../components/MoreSection";
 import { Values } from "../components/Values";
 import { WorkingStep } from "../components/WorkingStep";
+import { Link } from "react-router-dom";
 export const HeroSection = () => {
   return (
     <div className="overflow-x-hidden">
@@ -18,7 +19,7 @@ export const HeroSection = () => {
         {/* hero section content */}
         <div className="h-full flex flex-col items-center justify-center p-2 gap-2 mt-15">
           {/* heading */}
-          <div className="relative flex flex-col gap-3 lg:gap-6">
+          <div className="relative flex flex-col gap-3 lg:gap-6 w-full lg:w-[80%]">
             <motion.h1
               className="text-white text-5xl lg:text-6xl tracking-wider drop-shadow-[0px_0px_5px_rgba(0,0,0,1)]"
               initial={{ scale: 2, filter: "blur(5px)" }}
@@ -56,8 +57,11 @@ export const HeroSection = () => {
               </motion.h1>
             </div>
 
-            <motion.button className="bg-(--base-color) py-2 px-6 rounded-sm flex items-center gap-2 origin-left w-fit">
-              <span>Get Start</span>
+            <motion.button
+              className="bg-(--base-color) py-2 px-6 rounded-sm flex items-center gap-2 origin-left w-fit"
+              whileTap={{ scale: 0.8 }}
+            >
+              <Link to="/services">Get Start</Link>
             </motion.button>
           </div>
 
@@ -73,9 +77,9 @@ export const HeroSection = () => {
             {/* clients */}
             <motion.div
               className="flex-1 border border-white/20 p-6 rounded-2xl text-white backdrop-blur-[.2rem] bg-white/5 shadow-lg flex flex-col justify-center"
-              initial={{ scale: 0, filter: "blur(5px)" }}
-              animate={{ scale: 1, filter: "blur(0px)" }}
-              transition={{ duration: 0.3, delay: 1 }}
+              initial={{ opacity: 0, x: -500, filter: "blur(5px)" }}
+              animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+              transition={{ duration: 1, delay: 1 }}
             >
               <div className="text-lg font-bold text-shadow-[5px_5px_5px_rgba(0,0,0,.7)]">
                 100+
@@ -97,9 +101,9 @@ export const HeroSection = () => {
             {/* price */}
             <motion.div
               className="flex-1 border border-white/20 p-6 rounded-2xl text-white backdrop-blur-[.2rem] bg-white/5 shadow-lg text-sm"
-              initial={{ scale: 0, filter: "blur(5px)" }}
-              animate={{ scale: 1, filter: "blur(0px)" }}
-              transition={{ duration: 0.3, delay: 1 }}
+              initial={{ opacity: 0, x: 1000, filter: "blur(5px)" }}
+              animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+              transition={{ duration: 1, delay: 1 }}
             >
               <h4 className="text-lg font-semibold mb-4 tracking-wide text-shadow-[5px_5px_5px_rgba(0,0,0,.7)]">
                 Why Choose Us

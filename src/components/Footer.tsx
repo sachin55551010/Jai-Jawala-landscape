@@ -1,4 +1,6 @@
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io5";
+import { MdEmail } from "react-icons/md";
 
 export const Footer = () => {
   return (
@@ -6,34 +8,34 @@ export const Footer = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Brand */}
         <div>
-          <h2 className="text-2xl font-semibold mb-4">Landscape</h2>
-          <p className="text-(--main-text-color) text-sm leading-relaxed">
+          <h2 className="text-2xl font-semibold mb-4 text-(--secondary-text-color)">
+            Jai Jawala Nursery & Landscaping
+          </h2>
+          <p className="text-(--secondary-text-color) text-sm leading-relaxed">
             Crafting beautiful outdoor experiences with passion and precision.
           </p>
         </div>
 
         {/* Navigation */}
         <div>
-          <h3 className="font-semibold mb-4 text-lg text-(--main-text-color)">
+          <h3 className="font-semibold mb-4 text-lg text-(--secondary-text-color)">
             Quick Links
           </h3>
-          <ul className="flex flex-col gap-2 text-[--secondary-text-color]">
-            {["Home", "Services", "Projects", "About", "Contact"].map(
-              (item) => (
-                <li
-                  key={item}
-                  className="hover:scale-105 transition cursor-pointer text-(--main-text-color)"
-                >
-                  {item}
-                </li>
-              ),
-            )}
+          <ul className="flex flex-col gap-2 ">
+            {["Home", "Services", "Projects", "Contact"].map((item) => (
+              <li
+                key={item}
+                className="hover:scale-105 transition cursor-pointer text-(--secondary-text-color)"
+              >
+                {item}
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Contact Info */}
         <div>
-          <h3 className="font-semibold text-lg mb-4 text-(--main-text-color)">
+          <h3 className="font-semibold text-lg mb-4 text-(--secondary-text-color)">
             Contact
           </h3>
           <ul className="text-(--secondary-text-color) text-md flex flex-col gap-2">
@@ -53,13 +55,10 @@ export const Footer = () => {
               <FaFacebook />
             </a>
             <a href="#" className="hover:text-[--main-text-color] transition">
-              <FaInstagram />
+              <IoLogoWhatsapp />
             </a>
             <a href="#" className="hover:text-[--main-text-color] transition">
-              <FaTwitter />
-            </a>
-            <a href="#" className="hover:text-[--main-text-color] transition">
-              <FaLinkedin />
+              <MdEmail />
             </a>
           </div>
         </div>
@@ -67,7 +66,8 @@ export const Footer = () => {
 
       {/* Divider */}
       <div className="border-t border-[--secondary-text-color]/30 mt-10 pt-6 text-center text-sm text-[--secondary-text-color]">
-        © {new Date().getFullYear()} Landscape. All rights reserved.
+        © {new Date().getFullYear()} Jai Jawala Nursery & Landscaping. All
+        rights reserved.
       </div>
     </footer>
   );

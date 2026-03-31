@@ -21,21 +21,24 @@ export const NavBar = () => {
           </li>
         </Link>
 
-        {/* <li>About</li> */}
-
         <Link to="/services">
           <li className="tracking-widest text-shadow-[3px_3px_3px_rgba(0,0,0,.7)] ">
-            Service
+            {" "}
+            Service{" "}
           </li>
         </Link>
 
-        <li className="tracking-widest text-shadow-[3px_3px_3px_rgba(0,0,0,.7)] ">
-          Projects
-        </li>
+        <Link to="/projects">
+          <li className="tracking-widest text-shadow-[3px_3px_3px_rgba(0,0,0,.7)] ">
+            {" "}
+            Projects{" "}
+          </li>
+        </Link>
 
         <Link to="contact">
           <li className="tracking-widest text-shadow-[3px_3px_3px_rgba(0,0,0,.7)] ">
-            Contact
+            {" "}
+            Contact{" "}
           </li>
         </Link>
       </ul>

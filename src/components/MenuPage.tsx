@@ -63,19 +63,13 @@ export const MenuPage = () => {
           </div>
         </Link>
 
-        <Link to="projects">
+        <Link to="/projects">
           <div className="text-3xl border-b pb-6 font-bold border-white/40 hover:border-white cursor-pointer transition-all duration-300">
             Projects
           </div>
         </Link>
 
-        {/* <Link to="about">
-          <div className="text-3xl border-b pb-6 font-bold border-white/40 hover:border-white cursor-pointer transition-all duration-300">
-            About
-          </div>
-        </Link> */}
-
-        <Link to="contact">
+        <Link to="/contact">
           <div className="text-3xl border-b pb-6 font-bold border-white/40 hover:border-white cursor-pointer transition-all duration-300">
             Contact
           </div>
